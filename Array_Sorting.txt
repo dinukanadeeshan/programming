@@ -1,0 +1,80 @@
+Accending Order
+///////////////////////////////////////////////////////////////////
+import java.util.*;
+class Example{
+	public static void main(String args[]){
+		int[] x={4,8,7,6,5,9,3,2,1,0};
+		System.out.print("[");
+		for(int i=0;i<x.length;i++){
+			System.out.print(x[i]+", ");
+		}
+		System.out.println("\b\b]");
+		
+		//code
+		for(int j=x.length-1;j>=0;j--){
+			int max,index=0;
+			max=x[0];
+			for(int i=1;i<j+1;i++){
+				if(x[i]>max){
+					max=x[i];
+					index=i;
+				}
+			
+			}
+			x[index]=x[j];
+			x[j]=max;
+		}
+		
+		
+		System.out.print("[");
+		for(int i=0;i<x.length;i++){
+			System.out.print(x[i]+", ");
+		}
+		System.out.println("\b\b]");
+		
+		
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////Deccending Order
+/////////////////////////////////////////////////////////////////////////////////////
+import java.util.*;
+class Example{
+	public static void main(String args[]){
+		Random r=new Random();
+		int[] x=new int[10];
+		for(int i=0;i<10;i++){
+			x[i]=r.nextInt(20);
+			
+		}
+		System.out.print("[");
+		for(int i=0;i<x.length;i++){
+			System.out.print(x[i]+", ");
+		}
+		System.out.println("\b\b]");
+		
+		//code
+		for(int i = x.length-1; i>=0 ; i--){
+			int min=x[0],index=0;
+			for(int j=1;j<=i;j++){
+				if(x[j]<min){
+					min=x[j];
+					index=j;
+				}
+			}
+			x[index]=x[i];
+			x[i]=min;
+		} 
+				
+		
+		System.out.print("[");
+		for(int i=0;i<x.length;i++){
+			System.out.print(x[i]+", ");
+		}
+		System.out.println("\b\b]");
+		
+		
+	}
+}
+//////////////////////////////////////////////////////////////////////////////////////
+
+
